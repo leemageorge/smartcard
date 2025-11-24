@@ -1,5 +1,5 @@
 import React from "react";
-import profileIcon from '../assets/profile.svg'
+import profileIcon from '../assets/dp1.png'
 import { menuData } from "../data/menuData";
 const Popup = ({ isOpen, closePopup }) => {
  if(!isOpen) return null

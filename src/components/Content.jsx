@@ -33,11 +33,9 @@ const Content = () => {
   ];
 
   return (
-    <div className="h-full overflow-y-auto px-5 pt-[100px] pb-[130px] bg-gray-light">
+    <div className="h-full overflow-y-auto px-5 pt-20 pb-[130px] bg-gray-light">
       {items.map((item, index) => (
-        <div key={index}
-          className="bg-white p-5 mb-4 rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.2)]"
-        >
+        <div key={index} className="bg-white p-5 mb-4 rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.2)]">
           <h3 className="text-xl font-semibold">{item.title}</h3>
           <p className="text-dark-black leading-tight  ">{item.text}</p>
         </div>
