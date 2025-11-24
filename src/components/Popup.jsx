@@ -18,9 +18,9 @@ const Popup = ({ isOpen, closePopup }) => {
           <p className="text-sm text-white opacity-90">user@example.com</p>
         </div>
        </div>
-       <div className="divide-y divide-gray-200 ">
+       <div className="divide-y divide-gray-200 ml-2.5 mr-2.5  ">
         {menuData.map((item, index) => (
-        <div key={index} className="flex items-center justify-between py-5 px-5  ">
+        <div key={index} className="flex items-center justify-between p-5">
           <div className="flex items-center gap-2">
             <img src={item.icon} alt={item.label} className="w-6 h-6"/>
              <span>{item.label}</span>
