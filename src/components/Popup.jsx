@@ -6,7 +6,7 @@ const Popup = ({ isOpen, closePopup }) => {
 
   return (
    <div className="fixed h-full bg-black/40 top-0  left-1/2 -translate-x-1/2 w-full z-50  flex items-center justify-center overflow-hidden">
-      <div className="w-full max-h-[80vh]   max-w-[400px] bg-white rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.2)] overflow-y-hidden ">
+      <div className="w-full max-h-[80vh]   max-w-[350px] bg-white rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.2)] overflow-y-hidden ">
         <div className=" overflow-y-auto max-h-[80vh] ">
         <div className="h-[35vh] bg-red relative rounded-tl-lg rounded-tr-lg flex items-center justify-center">
         <button onClick={closePopup} className="text-white bg-red rounded-full w-[35px] h-[35px] text-sm font-semibold absolute top-5 right-5 shadow-[0_10px_40px_rgba(0,0,0,0.3)] hover:cursor-pointer">X</button>
@@ -18,9 +18,9 @@ const Popup = ({ isOpen, closePopup }) => {
           <p className="text-sm text-white opacity-90">user@example.com</p>
         </div>
        </div>
-       <div className="divide-y divide-gray-200 ml-2.5 mr-2.5  ">
+       <div className="divide-y divide-gray-200   ">
         {menuData.map((item, index) => (
-        <div key={index} className="flex items-center justify-between p-5">
+        <div key={index} className="flex items-center justify-between py-5 px-20">
           <div className="flex items-center gap-2">
             <img src={item.icon} alt={item.label} className="w-6 h-6"/>
              <span>{item.label}</span>
