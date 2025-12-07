@@ -9,6 +9,7 @@ const PersonalDetails = ({formData,handleSubmit,handleChange}) => {
         <input 
         type='text'
         placeholder='First Name'
+        required
         name="firstName"
         value={formData.firstName}
         onChange={handleChange} 
@@ -20,6 +21,7 @@ const PersonalDetails = ({formData,handleSubmit,handleChange}) => {
         type='text'
         placeholder='Last Name'
         name="lastName"
+        required
         value={formData.lastName}
         onChange={handleChange} 
         className='w-full px-5 py-2 border-2
@@ -29,6 +31,7 @@ const PersonalDetails = ({formData,handleSubmit,handleChange}) => {
       <input 
         type='email'
         placeholder='Email'
+        required
         name="email"
         value={formData.email}
         onChange={handleChange} 

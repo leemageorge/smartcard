@@ -7,6 +7,7 @@ const CompanyDetails = ({formData,handleSubmit,handleChange}) => {
           <h2 className='text-xl font-semibold text-center text-gray-700 mb-6'>Professional Details</h2>
         <input 
         type='text'
+        required
         placeholder='Company Name'
         name="companyName"
         value={formData.companyName}
