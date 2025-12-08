@@ -2,8 +2,8 @@ import React from 'react'
 
 const AboutCompany = ({formData,handleSubmit,handleChange}) => {
   return (
-    <div className="'w-full h-screen flex flex-col overflow-y-scroll px-5 pt-30 md:pt-20  shadow-md bg-gray-light ">
-        <form onSubmit={handleSubmit} className='max-w-[320px] w-full space-y-3 flex flex-col h-full'>
+    <div className="'w-full min-h-screen h-full flex flex-col overflow-y-scroll px-5 pt-20  shadow-md bg-gray-light ">
+        <form onSubmit={handleSubmit} className='max-w-[320px] w-full space-y-3 flex flex-col '>
         <textarea  
         type= "text" 
         rows="4"

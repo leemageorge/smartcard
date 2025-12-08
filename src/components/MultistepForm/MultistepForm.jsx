@@ -24,7 +24,7 @@ const MultistepForm = () => {
         <GalleryUploads formData={formData} setFormData={setFormData}  onNext={onNext} onPrev={onPrev} handleSubmit={handleSubmit} handleChange={handleChange}/>
     ]
   return (
-    <div className='w-full flex flex-col justify-center  h-screen px-5 pt-20 pb-[130px] '>
+    <div className='w-full flex flex-col justify-center  min-h-screen h-full px-5 pt-20 pb-[130px] '>
       {steps[step - 1]}
 
 {step === 1 ? (
