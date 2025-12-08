@@ -32,7 +32,7 @@ const GalleryUploads = ({ formData, setFormData, handleSubmit }) => {
   };
 
   return (
-    <div className='w-full h-screen flex flex-col overflow-y-scroll px-5 pt-20 bg-gray-light'>
+    <div className='w-full h-full flex flex-col justify-center overflow-y-scroll px-5 pt-20 bg-gray-light'>
       <form onSubmit={handleSubmit} className='max-w-[350px] mx-auto w-full space-y-6'>
         <h2 className="text-xl text-center font-semibold ">Upload Photos & Videos</h2>
         <div>

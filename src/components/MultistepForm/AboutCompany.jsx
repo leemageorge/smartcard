@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutCompany = ({formData,handleSubmit,handleChange}) => {
   return (
-    <div className="'w-full min-h-screen h-full flex flex-col overflow-y-scroll px-5 pt-20  shadow-md bg-gray-light ">
+    <div className="'w-full h-full flex flex-col justify-center overflow-y-scroll px-5 pt-20  shadow-md bg-gray-light ">
         <form onSubmit={handleSubmit} className='max-w-[320px] w-full space-y-3 flex flex-col '>
         <textarea  
         type= "text" 
@@ -19,4 +19,4 @@ const AboutCompany = ({formData,handleSubmit,handleChange}) => {
   )
 }
 
-export default AboutCompany
+export default AboutCompany 
