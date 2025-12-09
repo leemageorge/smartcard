@@ -2,7 +2,7 @@ import React from 'react'
 
 const CompanyAddress = ({formData,handleSubmit,handleChange}) => {
   return (
-     <div className="'w-full h-full flex flex-col justify-center overflow-y-scroll px-5 pt-20 shadow-md bg-gray-light ">
+
         <form onSubmit={handleSubmit} className='max-w-[320px] w-full space-y-3 flex flex-col justify-center h-full'>
         <input 
         type='text'
@@ -45,7 +45,7 @@ const CompanyAddress = ({formData,handleSubmit,handleChange}) => {
           focus:ring-red rounded outline-none 
           transition duration-200  '/>
         </form> 
-    </div> 
+
   )
 }
 

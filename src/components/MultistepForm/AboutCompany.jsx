@@ -1,9 +1,8 @@
 import React from 'react'
 
 const AboutCompany = ({formData,handleSubmit,handleChange}) => {
-  return (
-    <div className="'w-full h-full flex flex-col justify-center overflow-y-scroll px-5 pt-20  shadow-md bg-gray-light ">
-        <form onSubmit={handleSubmit} className='max-w-[320px] w-full space-y-3 flex flex-col '>
+  return ( 
+        <form onSubmit={handleSubmit} className='max-w-[380px] w-full space-y-3 flex flex-col'>
         <textarea  
         type= "text" 
         rows="4"
@@ -15,7 +14,6 @@ const AboutCompany = ({formData,handleSubmit,handleChange}) => {
         />
         
         </form>
-    </div> 
   )
 }
 

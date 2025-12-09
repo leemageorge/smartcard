@@ -16,13 +16,15 @@ const HomePage = () => {
   };  
 
   return (
-    <div className="min-h-screen flex justify-center bg-gray-200 overflow-y-hidden">
-      <div className="max-w-[430px] w-full h-screen bg-gray-100 shadow-[0_0_20px_rgba(0,0,0,0.2)] overflow-y-scroll relative">
+    <div className="flex justify-center bg-gray-100 min-h-dvh ">
+      <div className="max-w-[430px] w-full h-dvh flex flex-col items-center relative">
         <Header openPopup={handleOpenPopup} />
         {/* <Content /> */}
        {/* <UserPersonal />
        <UserProfessional /> */}
-      <MultistepForm />
+        <div className="flex-1 pt-30 px-5 pb-10 max-w-[380px] w-full h-screen overflow-y-scroll">
+         <MultistepForm />
+        </div>
         <Footer />
         <Popup isOpen={showPopup} closePopup ={()=> setShowPopup(false)} />
       </div>

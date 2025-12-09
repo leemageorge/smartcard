@@ -24,12 +24,12 @@ const MultistepForm = () => {
         <GalleryUploads formData={formData} setFormData={setFormData}  onNext={onNext} onPrev={onPrev} handleSubmit={handleSubmit} handleChange={handleChange}/>
     ]
   return (
-    <div className='w-full flex flex-col justify-center  min-h-screen h-full px-5 pt-20 pb-[130px] '>
+    <div className='bg-white p-5 pt-10 pb-10 rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.2)] overflow-y-scroll'>
       {steps[step - 1]}
 
 {step === 1 ? (
 
-  <div className="flex justify-end mt-4">
+  <div className="flex justify-end mt-10">
     <button
       onClick={onNext}
       type="submit"
@@ -41,7 +41,7 @@ const MultistepForm = () => {
   </div>
 ) : step === steps.length ? (
  
-  <div className="flex justify-between items-center mt-4">
+  <div className="flex justify-between items-center mt-10">
      <button
       type="submit"
       onClick={onPrev}
@@ -60,7 +60,7 @@ const MultistepForm = () => {
   </div>
 ) : (
 
-  <div className="flex justify-between items-center mt-4">
+  <div className="flex justify-between items-center mt-10">
     <button
       type="submit"
       onClick={onPrev}
