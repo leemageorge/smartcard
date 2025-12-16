@@ -16,13 +16,13 @@ const HomePage = () => {
   };  
 
   return (
-    <div className="flex justify-center bg-gray-100 min-h-dvh ">
-      <div className="max-w-[430px] w-full h-dvh flex flex-col items-center relative">
+    <div className="flex justify-center bg-gray-100  ">
+      <div className="max-w-[430px] w-full flex flex-col items-center relative">
         <Header openPopup={handleOpenPopup} />
         {/* <Content /> */}
        {/* <UserPersonal />
        <UserProfessional /> */}
-        <div className="flex-1 pt-30 px-5 pb-10 max-w-[380px] w-full h-screen overflow-y-scroll">
+        <div className=" pt-25 px-5 pb-10 sm:pb-[130px] max-w-[380px] w-full h-screen overflow-y-scroll ">
          <MultistepForm />
         </div>
         <Footer />

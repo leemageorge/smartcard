@@ -24,7 +24,7 @@ const MultistepForm = () => {
         <GalleryUploads formData={formData} setFormData={setFormData}  onNext={onNext} onPrev={onPrev} handleSubmit={handleSubmit} handleChange={handleChange}/>
     ]
   return (
-    <div className='bg-white p-5 pt-10 pb-10 rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.2)] overflow-y-scroll'>
+    <div className='bg-white p-5 pt-10 pb-10 rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.2)]'>
       {steps[step - 1]}
 
 {step === 1 ? (

@@ -1,39 +1,43 @@
 import user from "../assets/user.svg";
-import settings from "../assets/settings.svg";
-import documents from "../assets/documents.svg";
-import appointments from "../assets/appointment.svg";
-import history from "../assets/history.svg";
-import help from "../assets/help.svg";
-import logout from "../assets/logout.svg";
+// import settings from "../assets/settings.svg";
+// import documents from "../assets/documents.svg";
+// import appointments from "../assets/appointment.svg";
+// import history from "../assets/history.svg";
+// import help from "../assets/help.svg";
+// import logout from "../assets/logout.svg";
+import accounts from "../assets/accounts.svg"
+import newuser from "../assets/newuser.svg"
+import support from "../assets/support.svg"
+import getsupport from "../assets/getsupport.svg"
 
 export const menuData = [
     {
-        icon: user,
-        label:'My Profile'
+        icon: accounts,
+        label:'Accounts',
+        url:"/accounts"
     },
+    
      {
-        icon: settings,
-        label:'Settings'
+        icon: user,
+        label:'User Listing',
+        url:"/user-listing"
+
     },
     {
-        icon: documents,
-        label:'My Documents'
+        icon: newuser,
+        label:'New Users',
+        url:"/new-users"
     },
     {
-        icon: appointments,
-        label:'My Appointments'
+        icon: support,
+        label:'Support Request',
+        url:"/support-request"
     },
   
     {
-        icon: history,
-        label:'Activity History'
+        icon: getsupport,
+        label:'Get Support',
+        url:"/get-support"
     },
-    {
-        icon: help,
-        label:'Help & Support'
-    },
-    {
-        icon:logout,
-        label:'Logout'
-    },
+   
 ]
