@@ -1,6 +1,6 @@
 
 import UserCard from './UserCard'
-import ArrowRight from "../assets/ArrowRight.svg"
+
 
 const UserList = ({users,rightIcon }) => {
  
