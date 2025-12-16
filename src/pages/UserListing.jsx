@@ -3,10 +3,12 @@ import UserList from '../components/UserList'
 import { getUsers } from '../service/userService'
 import { useNavigate } from 'react-router-dom'
 import ArrowRight from "../assets/arrowRight.svg"
+import UserListingPopup from '../components/MultistepForm/UserListingPopup'
 
 const UserListing = () => {
   const [users,setUsers ] = useState([])
   const [search,setSearch] = useState("")
+  const [selectedUser,setSelectedUser] = useState(null)
   const navigate = useNavigate()
 
     const filteredUsers = users.filter((user)=>
@@ -21,7 +23,7 @@ const UserListing = () => {
 
   return (
      <div className="w-full max-w-[430px] bg-red h-10 px-5 ">
-      <div className="min-h-screen h-full flex flex-col  pt-16"> 
+      <div className="min-h-screen h-full flex flex-col  pt-16 "> 
         <div className='flex justify-start mb-6 px-5'>
         <button
         onClick={() => navigate(-1)}
@@ -30,7 +32,7 @@ const UserListing = () => {
         ← Back
       </button> 
         </div>
-        <div className=' w-full max-w-[350px] bg-white  max-h-[80vh]  overflow-y-scroll rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.2)] mx-auto px-5 pt-10 pb-6'>
+        <div className=' w-full max-w-[350px] bg-white max-h-[80vh] overflow-y-scroll rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.2)] mx-auto px-5 pt-10 pb-6'>
          <input type='text' 
             placeholder='Search ' 
             value={search}
@@ -40,10 +42,12 @@ const UserListing = () => {
            focus:ring-red rounded outline-none 
             transition duration-200 '/>
                    
-        <UserList users={filteredUsers} rightIcon={<img src={ArrowRight} alt='Arrowicon' />}/>
+        <UserList users={filteredUsers} rightIcon={<button onClick={(user)=>setSelectedUser(user)}><img src={ArrowRight} alt='Arrowicon'/></button>}/>
       </div>
+       {selectedUser && <UserListingPopup selectedUser={selectedUser} setSelectedUser={setSelectedUser} onClose={()=>setSelectedUser(null)}/>}
       </div>
     </div>
+   
   )
 }
 

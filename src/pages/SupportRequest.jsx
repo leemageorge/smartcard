@@ -20,7 +20,7 @@ const SupportRequest = () => {
             ← Back
           </button>
         </div>
-    <div className='bg-white w-full max-w-[350px] h-full overflow-y-scroll rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.2)] mx-auto px-5 pt-10 pb-6 '>
+    <div className='bg-white w-full max-w-[350px] max-h-[80vh] overflow-y-scroll rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.2)] mx-auto px-5 pt-10 pb-6 '>
       <div className='w-full  px-5 py-2 border-2 border-gray-300 hover:border-red rounded-lg text-center mb-6 cursor-pointer '>
         <Link to="" className='text-gray-400 text-lg' >Support Request</Link>
       </div>
