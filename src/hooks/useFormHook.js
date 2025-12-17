@@ -49,7 +49,8 @@ export const useFormHook = () => {
   const handleSubmit = (e)=>{
     e.preventDefault()
     console.log(formData)
-    alert("Form submitted!");
+    localStorage.setItem("formData",JSON.stringify(formData))
+    alert("Form Submitted Successfully!");
     // onNext()
   }
 

@@ -3,11 +3,13 @@ import UserList from '../components/UserList'
 import { getUsers } from '../service/userService'
 import { useNavigate } from 'react-router-dom'
 import ArrowRight from "../assets/arrowRight.svg"
-import UserListingPopup from '../components/MultistepForm/UserListingPopup'
+import UserListingPopup from '../components/UserListingPopup'
+import ManageForm from '../components/ManageForm'
 
 const UserListing = () => {
   const [users,setUsers ] = useState([])
   const [search,setSearch] = useState("")
+  const [showManage,setShowManage] = useState(false)
   const [selectedUser,setSelectedUser] = useState(null)
   const navigate = useNavigate()
 
@@ -22,7 +24,8 @@ const UserListing = () => {
   },[])
 
   return (
-     <div className="w-full max-w-[430px] bg-red h-10 px-5 ">
+    <>{!showManage &&
+      <div className="w-full max-w-[430px] bg-red h-10 px-5 ">
       <div className="min-h-screen h-full flex flex-col  pt-16 "> 
         <div className='flex justify-start mb-6 px-5'>
         <button
@@ -44,9 +47,16 @@ const UserListing = () => {
                    
         <UserList users={filteredUsers} rightIcon={<button onClick={(user)=>setSelectedUser(user)}><img src={ArrowRight} alt='Arrowicon'/></button>}/>
       </div>
-       {selectedUser && <UserListingPopup selectedUser={selectedUser} setSelectedUser={setSelectedUser} onClose={()=>setSelectedUser(null)}/>}
       </div>
     </div>
+    
+    }
+   
+    {!showManage && selectedUser && <UserListingPopup selectedUser={selectedUser}  setShowManage={setShowManage} onClose={() => setSelectedUser(null)} />}
+    { showManage && 
+     <ManageForm selectedUser={selectedUser} onClose={()=>setShowManage(!showManage)} />}
+    </>
+      
    
   )
 }

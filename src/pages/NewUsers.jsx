@@ -14,9 +14,9 @@ const NewUsers = () => {
     })
   })
 
-  const handleCall = (number)=>{
-    window.location.href = `tel:${number}`
-  }
+  // const handleCall = (number)=>{
+  //   window.location.href = `tel:${number}`
+  // }
   return (
     <div className='w-full max-w-[430px] h-10 bg-red'>
       <div className='min-h-screen h-full flex flex-col pt-15'>
@@ -29,7 +29,7 @@ const NewUsers = () => {
       <div className='w-full  px-5 py-2 border-2 border-gray-300 hover:border-red rounded-lg text-center mb-6 cursor-pointer '>
         <Link to={'/user-login'} className='text-gray-400 text-lg' >New User</Link>
       </div>
-      <UserList users={users} rightIcon={<button onClick={()=>handleCall(users.number)} className='cursor-pointer'><img src={CallIcon} alt="call Icon" /></button>} />
+      <UserList users={users} rightIcon={<a href={`tel:${users.number}`} className="cursor-pointer"><img src={CallIcon} alt="call Icon" /></a>} />
     </div>
     </div>
     </div>
