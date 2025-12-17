@@ -23,6 +23,13 @@ const UserListing = () => {
     })
   },[])
 
+  const renderRightIcon = (user) => (
+    <button onClick={() => setSelectedUser(user)}>
+      <img src={ArrowRight} alt='Arrow icon'/>
+    </button>
+  )
+
+  console.log(renderRightIcon)
   return (
     <>{!showManage &&
       <div className="w-full max-w-[430px] bg-red h-10 px-5 ">
@@ -45,7 +52,7 @@ const UserListing = () => {
            focus:ring-red rounded outline-none 
             transition duration-200 '/>
                    
-        <UserList users={filteredUsers} rightIcon={<button onClick={(user)=>setSelectedUser(user)}><img src={ArrowRight} alt='Arrowicon'/></button>}/>
+        <UserList users={filteredUsers} rightIcon={renderRightIcon}/>
       </div>
       </div>
     </div>
