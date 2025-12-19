@@ -1,44 +1,46 @@
 import React from 'react'
 
-const PersonalDetails = ({formData,handleSubmit,handleChange}) => {
+const PersonalDetails = ({formData,handleSubmit,handleChange,readOnly=false}) => {
   
   return (
   
-        <form onSubmit={handleSubmit} className='max-w-[320px] w-full space-y-3 flex flex-col h-full'>
-          <h2 className='text-xl font-semibold text-center text-gray-700 mb-6'>Personal Details</h2>
+        <form 
+        onSubmit={handleSubmit} 
+        className='max-w-[320px] w-full space-y-3 flex flex-col h-full'>
+        <h2 className='text-xl font-semibold text-center text-gray-700 mb-6'>Personal Details</h2>
         <input 
         type='text'
         placeholder='First Name'
-        required
+        readOnly={readOnly}
         name="firstName"
-        value={formData.firstName}
+        value={formData?.firstName || ""}
         onChange={handleChange} 
         className='w-full px-5 py-2 border-2
          border-gray-300 focus:border-red focus-ring-1
           focus:ring-red rounded outline-none 
-          transition duration-200  '/>
+          transition duration-200   ${readOnly ? "bg-gray-100 cursor-not-allowed" : "" '/>
         <input 
         type='text'
         placeholder='Last Name'
         name="lastName"
-        required
-        value={formData.lastName}
+        readOnly={readOnly}
+        value={formData?.lastName || ""}
         onChange={handleChange} 
         className='w-full px-5 py-2 border-2
          border-gray-300 focus:border-red focus-ring-1
           focus:ring-red rounded outline-none 
-          transition duration-200  '/>
+          transition duration-200   ${readOnly ? "bg-gray-100 cursor-not-allowed" : "" '/>
       <input 
         type='email'
         placeholder='Email'
-        required
+        readOnly={readOnly}
         name="email"
-        value={formData.email}
+        value={formData?.email || ""}
         onChange={handleChange} 
         className='w-full px-5 py-2 border-2
          border-gray-300 focus:border-red focus-ring-1
           focus:ring-red rounded outline-none 
-          transition duration-200  '/>
+          transition duration-200 ${readOnly ? "bg-gray-100 cursor-not-allowed":""} '/>
         </form>
   
   )

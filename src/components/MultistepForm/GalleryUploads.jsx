@@ -34,10 +34,10 @@ const GalleryUploads = ({ formData, setFormData, handleSubmit }) => {
   return (
    
       <form onSubmit={handleSubmit} className='max-w-[350px] mx-auto w-full space-y-6'>
-        <h2 className="text-xl text-center font-semibold ">Upload Photos & Videos</h2>
+        <h2 className="text-xl text-center text-gray-800 font-semibold ">Upload Photos & Videos</h2>
         <div>
             <div className="grid grid-cols-3 gap-3 ">
-              {formData.photos.map((photo, index) => (
+              {formData?.photos.map((photo, index) => (
                 <div key={index} className="relative">
                   <img
                     src={URL.createObjectURL(photo)}
@@ -74,7 +74,7 @@ const GalleryUploads = ({ formData, setFormData, handleSubmit }) => {
       
         
             <div className="space-y-3 mt-4">
-              {formData.videos.map((video, index) => (
+              {formData?.videos.map((video, index) => (
                 <div key={index} className="relative">
                   <video
                     controls

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SocialLinks = ({formData,handleSubmit,setFormData,handleChange}) => {
+const SocialLinks = ({formData,handleSubmit,setFormData,handleChange,readOnly=false}) => {
       const handleBackspace = (e,index)=>{
         if(e.key === "Backspace"){
           if(formData.website[index] === "" && index > 0){
@@ -14,6 +14,7 @@ const SocialLinks = ({formData,handleSubmit,setFormData,handleChange}) => {
         <form onSubmit={handleSubmit} className='max-w-[320px] w-full space-y-3 flex flex-col h-full'>
         <input 
         type='text'
+        readOnly={readOnly}
         placeholder='Facebook Link'
         name="fbLink"
         value={formData.fbLink}
@@ -24,6 +25,7 @@ const SocialLinks = ({formData,handleSubmit,setFormData,handleChange}) => {
           transition duration-200  '/>
         <input 
         type='text'
+           readOnly={readOnly}
         placeholder='Insta Link'
         name="InstaLink"
         value={formData.InstaLink}
@@ -34,6 +36,7 @@ const SocialLinks = ({formData,handleSubmit,setFormData,handleChange}) => {
           transition duration-200  '/>
         <input 
          type='text'
+            readOnly={readOnly}
          placeholder='LinkedIn Link'
          name="linkedin"
          value={formData.linkedin}
@@ -44,6 +47,7 @@ const SocialLinks = ({formData,handleSubmit,setFormData,handleChange}) => {
           transition duration-200  '/>
           <input 
            type="text"
+              readOnly={readOnly}
            placeholder="X (Twitter) Link"
            name="xLink"
            value={formData.xLink}
@@ -58,6 +62,7 @@ const SocialLinks = ({formData,handleSubmit,setFormData,handleChange}) => {
                 <input 
                 key={index}
                 type="text"
+                   readOnly={readOnly}
                 placeholder='Website'
                 value={link}
                 onChange={(e)=>{

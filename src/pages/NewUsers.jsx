@@ -20,7 +20,7 @@ const NewUsers = () => {
       <img src={CallIcon} alt="call Icon" />
     </a>
   )
-  console.log(renderRightIcon)
+
   return (
     <div className='w-full max-w-[430px] h-10 bg-red'>
       <div className='min-h-screen h-full flex flex-col pt-15'>

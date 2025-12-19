@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 
-export const useFormHook = () => {
-    const[step,setStep] = useState(1)
-    
-    const[formData,setFormData]= useState({
+const defaultFormData = {
         firstName:"",
         lastName:"",
         email:"",
@@ -28,9 +25,13 @@ export const useFormHook = () => {
         photos:[],
         videos:[]
 
-    })
-
-    // Navigation
+}
+export const useFormHook = (initialData = null) => {
+    const[step,setStep] = useState(1)
+    
+    const [formData, setFormData] = useState(() =>
+        initialData ? { ...defaultFormData, ...initialData,website:initialData.website??[""] } : defaultFormData
+);
 
     const onNext = () => {
         setStep((prev)=>prev+1)
@@ -40,16 +41,17 @@ export const useFormHook = () => {
     }
 
     const handleChange = ((e)=>{
-    setFormData({
-      ...formData,
-      [e.target.name]:e.target.value
-    })
+      const {name,value} = e.target
+    setFormData((prev)=>({
+      ...prev,
+      [name]:value
+    }))
   })
 
   const handleSubmit = (e)=>{
     e.preventDefault()
     console.log(formData)
-    localStorage.setItem("formData",JSON.stringify(formData))
+    // localStorage.setItem("formData",JSON.stringify(formData))
     alert("Form Submitted Successfully!");
     // onNext()
   }

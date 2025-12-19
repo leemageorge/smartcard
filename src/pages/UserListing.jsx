@@ -61,7 +61,7 @@ const UserListing = () => {
    
     {!showManage && selectedUser && <UserListingPopup selectedUser={selectedUser}  setShowManage={setShowManage} onClose={() => setSelectedUser(null)} />}
     { showManage && 
-     <ManageForm selectedUser={selectedUser} onClose={()=>setShowManage(!showManage)} />}
+     <ManageForm selectedUser={selectedUser} onClose={()=>setShowManage(false) } />}
     </>
       
    

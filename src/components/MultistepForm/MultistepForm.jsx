@@ -21,7 +21,7 @@ const MultistepForm = () => {
         <CompanyContact formData={formData} setFormData={setFormData}  onNext={onNext} onPrev={onPrev} handleSubmit={handleSubmit} handleChange={handleChange} />,
         <SocialLinks  formData={formData} setFormData={setFormData}  onNext={onNext} onPrev={onPrev} handleSubmit={handleSubmit} handleChange={handleChange} />,
         <AboutCompany  formData={formData} setFormData={setFormData}  onNext={onNext} onPrev={onPrev} handleSubmit={handleSubmit} handleChange={handleChange} />,
-        <GalleryUploads formData={formData} setFormData={setFormData}  onNext={onNext} onPrev={onPrev} handleSubmit={handleSubmit} handleChange={handleChange}/>
+        // <GalleryUploads formData={formData} setFormData={setFormData}  onNext={onNext} onPrev={onPrev} handleSubmit={handleSubmit} handleChange={handleChange}/>
     ]
   return (
     <div className='bg-white p-5 pt-10 pb-10 rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.2)]'>
