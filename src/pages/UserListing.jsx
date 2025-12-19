@@ -5,12 +5,13 @@ import { useNavigate } from 'react-router-dom'
 import ArrowRight from "../assets/arrowRight.svg"
 import UserListingPopup from '../components/UserListingPopup'
 import ManageForm from '../components/ManageForm'
+import ChatWindow from '../components/ChatWindow'
 
 const UserListing = () => {
   const [users,setUsers ] = useState([])
   const [search,setSearch] = useState("")
   const [showManage,setShowManage] = useState(false)
-  const [selectedUser,setSelectedUser] = useState(null)
+  const[selectedUser,setSelectedUser] = useState(null)
   const navigate = useNavigate()
 
     const filteredUsers = users.filter((user)=>
@@ -62,6 +63,7 @@ const UserListing = () => {
     {!showManage && selectedUser && <UserListingPopup selectedUser={selectedUser}  setShowManage={setShowManage} onClose={() => setSelectedUser(null)} />}
     { showManage && 
      <ManageForm selectedUser={selectedUser} onClose={()=>setShowManage(false) } />}
+    
     </>
       
    
