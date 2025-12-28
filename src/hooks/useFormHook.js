@@ -20,7 +20,7 @@ const defaultFormData = {
         InstaLink:"",
         linkedin:"",
         xLink:"",
-        website:[""],
+        website:[{name:"", url:""}],
         aboutCompany:"",
         photos:[],
         videos:[]

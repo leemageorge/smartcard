@@ -41,7 +41,7 @@ const ChatWindow = ({activeUser,onClose}) => {
             ...prev,
             {
                 sender:"agent",
-                text:"ok Done",
+                text:["ok Done","sure","will do it right now"][Math.floor(Math.random()*3)],
                 date:getDate()
                 }
             ])
@@ -60,13 +60,18 @@ const ChatWindow = ({activeUser,onClose}) => {
         </div>
         {message.map((msg,index)=>(
             <div key={index} className='mb-3'>
-                <div className='flex justify-end text-gray-400 text-sm'>
+                <div className={`flex ${msg.sender === "agent" ? "justify-start" : "justify-end"} mb-1 text-xs text-gray-500`}>
                    { msg.date}
                 </div>
-                <div className={`${msg.sender === "agent" ? "bg-gray-200 text-gray-800 px-5 py-2 rounded-lg ml-auto":"bg-gray-100 text-gray-800 px-5 py-2 rounded-lg ml-auto  "}`}>
+                {/* <div className={`${msg.sender === "agent" ? "bg-gray-200 text-gray-800 px-5 py-2 rounded-lg ml-auto":"bg-gray-100 text-gray-800 px-5 py-2 rounded-lg ml-0 text-right  "}`}>
                     {msg.text}
-                </div>
-                
+                </div> */}
+
+                <div className={`flex ${msg.sender === "agent" ? "justify-start" : "justify-end"}`}>
+                    <div className={msg.sender === "agent" ? "bg-gray-100 px-2 py-1 rounded-lg w-3/4 ":"bg-red-100 px-5 py-1 rounded-lg w-3/4"}>
+                        {msg.text}
+                    </div>
+                </div>      
             </div>
         ))}
         <div ref={bottomRef} />
@@ -79,6 +84,7 @@ const ChatWindow = ({activeUser,onClose}) => {
     value={input}
     placeholder="Type message..."
     onChange={(e) => setInput(e.target.value)}
+    onKeyDown={(e)=>{if(e.key === "Enter" && input.trim()){sendMessage()}}}
     className="flex-1 border border-gray-400 rounded-lg
                px-3 py-3 outline-none
                focus:border-red"

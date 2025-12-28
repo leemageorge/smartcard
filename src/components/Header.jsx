@@ -1,6 +1,4 @@
 
-
-
 import popupIcon from '../assets/dp1.png'
 const Header = ({openPopup}) => {
 

@@ -3,14 +3,14 @@ import Header from "../components/Header";
 // import Content from "../components/Content";
 import Footer from "../components/Footer";
 import Popup from "../components/Popup";
-import UserPersonal from "../components/UserPersonal";
-import UserProfessional from "../components/UserProfessional";
-import MultiStepForm from "../components/UserProfessional";
+// import UserPersonal from "../components/UserPersonal";
+// import UserProfessional from "../components/UserProfessional";
+// import MultiStepForm from "../components/UserProfessional";
 import MultistepForm from "../components/MultistepForm/MultistepForm";
 
 const HomePage = () => {
   const [showPopup, setShowPopup] = useState(false);
-
+    
   const handleOpenPopup = () => {
     setShowPopup(true);
   };  

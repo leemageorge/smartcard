@@ -2,12 +2,13 @@ import React from 'react'
 
 const SocialLinks = ({formData,handleSubmit,setFormData,handleChange,readOnly=false}) => {
       const handleBackspace = (e,index)=>{
-        if(e.key === "Backspace"){
-          if(formData.website[index] === "" && index > 0){
-            const updated = [...formData.website]
-            updated.splice(index,1)
-            setFormData({...formData,website:updated})
-          } }
+       if(e.key === "Backspace" && formData.website[index].name ===""
+        && formData.website[index].url ==="" && formData.website.length >1){
+          const updated = [...formData.website]
+          updated.splice(index,1)
+          setFormData({...formData, website:updated})
+        }
+       
         }
   
   return (
@@ -59,12 +60,31 @@ const SocialLinks = ({formData,handleSubmit,setFormData,handleChange,readOnly=fa
           <div className='space-y-3'>
             {
               formData.website.map((link,index)=>(
-                <input 
+                <div className='space-y-2'>
+                  {index !== 0 && ( <input 
                 key={index}
                 type="text"
                    readOnly={readOnly}
-                placeholder='Website'
-                value={link}
+                placeholder='Website Name'
+                value={link.name}
+                onChange={(e)=>{
+                  const updated = [...formData.website]
+                  updated[index]= e.target.value
+                  setFormData({...formData, website:updated})
+                }}
+                onKeyDown={(e) => handleBackspace(e, index)}
+                className="w-full px-5 py-2 border-2
+                 border-gray-300 focus:border-red
+                 focus:ring-1 focus:ring-red rounded 
+                 outline-none transition duration-200"
+                />)}
+                
+                 <input 
+                key={index}
+                type="text"
+                   readOnly={readOnly}
+                placeholder='Website Link'
+                value={link.url}
                 onChange={(e)=>{
                   const updated = [...formData.website]
                   updated[index]= e.target.value
@@ -76,6 +96,8 @@ const SocialLinks = ({formData,handleSubmit,setFormData,handleChange,readOnly=fa
                  focus:ring-1 focus:ring-red rounded 
                  outline-none transition duration-200"
                 />
+                </div>
+                
               ))
             }
           <div className='flex justify-end'>
@@ -84,7 +106,7 @@ const SocialLinks = ({formData,handleSubmit,setFormData,handleChange,readOnly=fa
             onClick={()=>
               setFormData({
                 ...formData,
-                website:[...formData.website,""]
+                website:[...formData.website,{name:"",url:""}]
               })
             }
             className='px-4 py-2 bg-red

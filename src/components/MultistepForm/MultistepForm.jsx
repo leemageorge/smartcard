@@ -32,7 +32,7 @@ const MultistepForm = () => {
   <div className="flex justify-end mt-10">
     <button
       onClick={onNext}
-      type="submit"
+      type="button"
       className="px-6 py-1 border border-gray-300 text-gray-700 rounded-lg 
                  hover:bg-red hover:text-white transition cursor-pointer"
     >
@@ -43,7 +43,7 @@ const MultistepForm = () => {
  
   <div className="flex justify-between items-center mt-10">
      <button
-      type="submit"
+      type="button"
       onClick={onPrev}
       className="px-6 py-1 border border-gray-300 text-gray-700 rounded-lg 
                  hover:bg-red hover:text-white transition cursor-pointer"
@@ -51,7 +51,7 @@ const MultistepForm = () => {
       ← Back
     </button>
     <button
-      type="submit"
+      type="button"
       onClick={handleSubmit}
       className="px-6 py-1 bg-red text-white rounded-lg hover:bg-darkred transition cursor-pointer"
     >
@@ -62,7 +62,7 @@ const MultistepForm = () => {
 
   <div className="flex justify-between items-center mt-10">
     <button
-      type="submit"
+      type="button"
       onClick={onPrev}
       className="px-6 py-1 border border-gray-300 text-gray-700 rounded-lg 
                  hover:bg-red hover:text-white transition cursor-pointer"
@@ -71,7 +71,7 @@ const MultistepForm = () => {
     </button>
 
     <button
-      type="submit"
+      type="button"
       onClick={onNext}
       className="px-6 py-1 border border-gray-300 text-gray-700 rounded-lg 
                  hover:bg-red hover:text-white transition cursor-pointer"

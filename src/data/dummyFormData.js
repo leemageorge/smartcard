@@ -24,8 +24,10 @@ export const dummyFormData = {
   xLink: "https://x.com/sabukuttan",
 
   website: [
-    "https://testComapany.in",
-    "https://portfolio.testcompany.in"
+
+  { name: "Main Website", url: "https://mainwebsite.com" },
+  { name: "company Website", url: "https://companyexample.com" },
+
   ],
 
   aboutCompany:
