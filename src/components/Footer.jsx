@@ -1,6 +1,9 @@
-import React from 'react';
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
+
+
   return (
     <footer className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] bg-white border-t-2 border-red h-[100px] z-50 flex items-center justify-around">
 {/* user button */}
@@ -14,12 +17,13 @@ const Footer = () => {
         <span className="text-sm leading-wider tracking-wider font-bold mt-1 ">USERS</span>
       </div>
       {/* add button */}
-        <div className="relative -top-[50px]">
-         <div className="w-[70px] h-[70px] rounded-full bg-white text-[40px] font-light
+        <Link to="/homepage" className="relative -top-[50px]">
+         <button  className="w-[70px] h-[70px] rounded-full bg-white text-[40px] font-light
              border-[3px] border-red flex items-center justify-center shadow-md">
           <span className=" text-red">+</span>
-        </div>
-        </div>
+        </button>
+        </Link>
+        
 
       {/* request button */}
       <div className="flex flex-col items-center gap-1 text-black cursor-pointer">

@@ -22,7 +22,7 @@ const AgentLogin = () => {
             value={phoneNumber}
             onChange={(e)=>setPhoneNumber(e.target.value)}
             className="w-full px-4 py-2 border border-gray-300 focus:border-red focus:ring-1 focus:ring-red rounded-xl outline-none transition duration-200"/>
-        <button type='submit'
+        <button type='send verification code'
           className="w-full bg-red hover:bg-red-700 text-white py-2 rounded-xl font-medium transition duration-200 shadow-[0_3px_10px_rgba(0,0,0,0.2)] cursor-pointer">
           Send OTP
         </button>

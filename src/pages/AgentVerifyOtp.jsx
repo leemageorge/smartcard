@@ -17,7 +17,7 @@ const AgentVerifyOtp = () => {
         <input 
          type="text"
          value={verificationCode}
-         placeholder='verification code'
+         placeholder='Enter Verification Code Here'
          className="w-full px-4 py-2 border border-gray-300 focus:border-red focus:ring-1 focus:ring-red rounded-xl outline-none transition duration-200"
          onChange={(e)=>setVerificationCode(e.target.value)} />
          <button type='submit'

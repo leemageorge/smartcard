@@ -9,6 +9,7 @@ import NewUsers from "./pages/NewUsers";
 import SupportRequest from "./pages/SupportRequest";
 import GetSupport from "./pages/GetSupport";
 import Accounts from "./pages/Accounts";
+import AdminDashboard from "./pages/AdminDashboard";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
      {
         path:"/user-verify-otp",
         element:<UserVerifyOtp />
+    },
+      {
+        path:"/admindashboard",
+        element:<AdminDashboard />
     },
      {
         path:"/homepage",

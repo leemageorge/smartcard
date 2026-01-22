@@ -7,7 +7,7 @@ const UserVerifyOtp = () => {
     const handleSubmit= (e)=>{
         e.preventDefault()
         console.log(userVerificationCode)
-         navigate('/homepage')
+         navigate('/admindashboard')
     }
   return (
    <div className="w-full max-w-[430px] bg-red h-10 px-5 ">
